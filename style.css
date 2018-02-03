@@ -26,6 +26,11 @@
     }
 }
 
+body{
+    font-family: 'Varela Round';
+    font-size: 1.5vw;
+    color: white;
+}
 
 .main {
     width: 100%;
@@ -41,3 +46,37 @@
 }
 
 
+
+.demo {
+/*    position: relative;*/
+/*    height: 0;*/
+/*    padding-bottom: 56.25%;*/
+    max-width: 300px;
+    width: 100%;
+}
+
+.demo video{
+/*    position: absolute;*/
+    width: 100%;
+    height: auto;
+/*    top: 0;*/
+/*    left: 0;*/
+}
+
+.phone.screen {
+    background: url(imgs/pixel.png) no-repeat center;
+    background-size: contain;
+    padding: 17.5% 18%;
+}
+
+.excerpt{
+    font-size: 1.35em;
+}
+.container.info{
+    max-width: 40%
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
