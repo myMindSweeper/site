@@ -1,4 +1,32 @@
 
+@keyframes move{
+    from{
+        background-position: 0 0;
+    }
+    to {
+        background-position: -100% 0;
+    }
+}
+
+@keyframes move-diagonal-down{
+    from{
+        background-position: 0 0;
+    }
+    to {
+        background-position: -100% -100%;
+    }
+}
+
+@keyframes move-diagonal-top{
+    from{
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+
 .main {
     width: 100%;
     height: 100vh;
@@ -6,8 +34,10 @@
     justify-content: space-around;
     align-items: center;
     background-color: #202122;
+    background-image: url(imgs/o.svg), url(imgs/x.svg), url(imgs/slash.svg);
+    background-size: 450px, 300px, 450px;
+    animation: move-diagonal-top 23s infinite ease-in-out alternate;
+/*    animation-name: move, move-diagonal-down, move-diagonal-top;*/
 }
 
-.logo {
-    filter: brightness(10000)
-}
+
