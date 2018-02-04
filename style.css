@@ -19,10 +19,30 @@
 
 @keyframes move-diagonal-top{
     from{
-        background-position: 0 0;
+        background-position: 0 0, 0 0, 0 0;
     }
     to {
         background-position: 100% 100%;
+    }
+}
+
+@keyframes fade{
+    from{
+        opacity: 0
+    }
+    to{
+        opacity: 1
+    }
+}
+
+@keyframes fade-in{
+    from{
+        opacity: 0;
+        transform: translateX(100px)
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px)
     }
 }
 
@@ -67,6 +87,8 @@ body{
     background: url(imgs/pixel.png) no-repeat center;
     background-size: contain;
     padding: 17.5% 18%;
+    opacity: 0;
+    animation: 1s fade .1s linear forwards;
 }
 
 .excerpt{
@@ -74,7 +96,9 @@ body{
     padding: 20px 0;
 }
 .container.info{
-    max-width: 40%
+    max-width: 40%;
+    opacity: 0;
+    animation: 1s fade-in 1s ease forwards
 }
 
 .logo {
@@ -100,4 +124,45 @@ body{
     pointer-events: none;
     filter: grayscale(1);
     cursor: not-allowed;
+}
+
+.g-signin2 {
+    transform: scale(2) translateY(25%) translateX(-25%); !important
+    padding-left: 100px; !important
+}
+
+.file-upload {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.6);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+
+.file-upload.hidden{
+    display: none;
+}
+
+
+#dropzone {
+    padding: 195px;
+    background: lightslategray;
+    border-radius: 50px;
+    border: darkslategray dashed .5em;
+}
+
+.about {
+    background: #575859;
+/*    color: #202122;*/
+    display: flex;
+    justify-content: center;
+    padding: 50px 0
+}
+
+.about div{
+    width: 960px;
 }
