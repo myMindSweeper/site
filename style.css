@@ -140,7 +140,8 @@ ol{
     padding: 15px 20px;
     background: orangered;
     border-radius: 100px;
-    font-size: 1.5em
+    font-size: 1.5em;
+    margin-top: 8px
 }
 
 .buttons {
@@ -155,7 +156,7 @@ ol{
 }
 
 .g-signin2 {
-    transform: scale(2) translateY(calc(25% - 3px)) translateX(-25%); !important
+    transform: scale(2) translateY(calc(25%)) translateX(-25%); !important
     padding-left: 100px; !important
 }
 
