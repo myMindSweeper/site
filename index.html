@@ -33,7 +33,7 @@
     <section class="file-upload hidden">
         <div class="container">
             <div>
-                <p>Stuff goes here</p>
+                <p>&nbsp;</p>
             </div>
         </div>
         <div class="container info">
@@ -41,16 +41,33 @@
         </div>
     </section>
     <section class="about">
-        <div>
+        <div class="profiles">
+            <img src="https://avatars2.githubusercontent.com/u/25759091?s=400" alt="">
+            <img src="https://avatars0.githubusercontent.com/u/5028527?s=400" alt="">
+            <img src="https://avatars0.githubusercontent.com/u/15697505?s=400" alt="">
+            <img src="https://avatars0.githubusercontent.com/u/15697692?s=400" alt="">
+        </div>
+       <div>
             <div class="content">
-                <h1>About the Team</h1>
-                <p></p>
+                <h1>About myMindSweeper</h1>
+                <p><em>Half of our team has or is currently experiencing mental illness.</em></p>
+                <p>One of the best ways to recover from a mental illness such as Depression, PTSD, or Anxiety Disorder is to identify your triggers: the things in your daily life that bring up the negative feelings associated with your mental illness.</p>
+                <p>When you're suffering from a mental health condition that causes crippling anxiety, emotional flashbacks, or even triggers suicidal thoughts, all you want is to regain some control. <strong>This is where My MindSweeper comes in.</strong></p>
             </div>
-            <div class="profiles">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+
+            <div class="content right">
+                <h1>FAQ</h1>
+                <div class="question">
+                    <h3>How do I upload my Facebook data?</h3>
+                    <ol>
+                        <li><a href="https://www.facebook.com/settings" target="_blank">Go here</a> to click "Download a copy" to request your Facebook data</li>
+                        <li>Once you recieve an email mentioning your data is ready to download, download the file</li>
+                        <li>Extract the newly downloaded archive and navigate to the "messages" folder</li>
+                        <li>Make sure to click on the sign in button so the upoad area appears</li>
+                        <li>Inside the messages folder, drag all the numbered htm files and index.htm file at once to the upload area</li>
+                        <li>Now download the app and see what the results are!</li>
+                    </ol>
+                </div>
             </div>
         </div>
     </section>
@@ -72,10 +89,8 @@
         
         function processFiles(e) {
         
-            e.preventDefault();
-
+          e.preventDefault();
             
-          // var preview = document.querySelector('#preview');
           var files   = e.dataTransfer.files;
           var datas = [];
 
@@ -86,14 +101,6 @@
               var reader = new FileReader();
 
               reader.addEventListener("load", function () {
-                // var image = new Image();
-                // image.height = 100;
-                // image.title = file.name;
-                // image.src = this.result;
-                // preview.appendChild( image );
-
-                // console.log(this.result);
-
                 datas.push(this.result);
                 console.log(datas.length);
                   if(datas.length == files.length){
@@ -119,9 +126,9 @@
                     token: id_token,
                     files: filesToSend
                 };
-//            console.log(jsonData);\
+
             jsonData = JSON.stringify(jsonData);
-//            console.log(JSON.stringify(jsonData));
+
             $.post({
                 url: "http://54.163.167.120:5000/upload-fb",
                 data: jsonData,
@@ -132,34 +139,6 @@
                 console.log(jqXHR);
             });
         }
-        
-//        const retrievePromise = googleyolo.retrieve({
-//          supportedAuthMethods: [
-//            "https://accounts.google.com",
-//            "googleyolo://id-and-password"
-//          ],
-//          supportedIdTokenProviders: [
-//            {
-//              uri: "https://accounts.google.com",
-//              clientId: "263280707472-o46anofpr2aoc3aslltgeaegjg3qpqlp.apps.googleusercontent.com"
-//            }
-//          ]
-//        });
-////        $('.button.upload').on('click', e => (
-////            
-////        ));
-//        
-//        const hintPromise = googleyolo.hint({
-//          supportedAuthMethods: [
-//            "https://accounts.google.com"
-//          ],
-//          supportedIdTokenProviders: [
-//            {
-//              uri: "https://accounts.google.com",
-//              clientId: "263280707472-o46anofpr2aoc3aslltgeaegjg3qpqlp.apps.googleusercontent.com"
-//            }
-//          ]
-//        });
 
 
     </script>

@@ -46,10 +46,38 @@
     }
 }
 
+em{
+    font-style: italic;
+}
+
+strong{
+    font-weight: bold
+}
+
 body{
     font-family: 'Varela Round';
     font-size: 1.5vw;
     color: white;
+    line-height: 1.15em
+}
+
+h1{
+    font-size: 2em;
+    padding-bottom: .5em;
+}
+
+h3 {
+    font-size: 1.25em;
+    margin-bottom: .5em
+}
+
+a {
+    color: orangered
+}
+
+ol{
+    list-style: decimal;
+    list-style-position: inside
 }
 
 .main {
@@ -159,10 +187,51 @@ body{
     background: #575859;
 /*    color: #202122;*/
     display: flex;
-    justify-content: center;
-    padding: 50px 0
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+    min-height: 100vh
 }
 
-.about div{
-    width: 960px;
+.about > div{
+    display: flex;
+    width: 1360px;
+    flex-direction: row;
+}
+
+.about .content{
+    max-width: 50%
+}
+
+.about .content p{
+    padding-bottom: .5em;
+}
+
+.about .content h1{
+    line-height: 1em;
+}
+
+.about .profiles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    margin-bottom: 50px
+}
+
+.about .profiles img{
+    max-width: 15%;
+    height: auto;
+    align-self: center;
+    margin: 10px;
+    border-radius: 300px;
+    border: white 10px solid 
+}
+
+.about .content.right {
+    margin-left: 20px;
+}
+
+.about .content ol li{
+    margin-bottom: .25em;
 }
