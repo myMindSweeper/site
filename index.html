@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta name="google-signin-client_id" content="263280707472-o46anofpr2aoc3aslltgeaegjg3qpqlp.apps.googleusercontent.com">
 </head>
 <body>
     <section class="main">
@@ -20,12 +23,50 @@
             <img src="imgs/logo.svg" alt="" class="logo">
             <h2 class="excerpt">Helping those with mental illness safely traverse their personal minefields. </h2>
             <div class="buttons">
-                <a href="#" class="button"></a>
-                <a href="#" class="button"></a>
+                <a href="#" class="button">Download App</a>
+                <a href="#" class="button upload disabled">Upload Data</a>
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
             </div>
         </div>
     </section>
     <section></section>
     <section></section>
+    <script type="application/javascript">
+        var id_token;
+        
+        function onSignIn(googleUser) {
+          var id_token = googleUser.getAuthResponse().id_token;
+        }
+        
+//        const retrievePromise = googleyolo.retrieve({
+//          supportedAuthMethods: [
+//            "https://accounts.google.com",
+//            "googleyolo://id-and-password"
+//          ],
+//          supportedIdTokenProviders: [
+//            {
+//              uri: "https://accounts.google.com",
+//              clientId: "263280707472-o46anofpr2aoc3aslltgeaegjg3qpqlp.apps.googleusercontent.com"
+//            }
+//          ]
+//        });
+////        $('.button.upload').on('click', e => (
+////            
+////        ));
+//        
+//        const hintPromise = googleyolo.hint({
+//          supportedAuthMethods: [
+//            "https://accounts.google.com"
+//          ],
+//          supportedIdTokenProviders: [
+//            {
+//              uri: "https://accounts.google.com",
+//              clientId: "263280707472-o46anofpr2aoc3aslltgeaegjg3qpqlp.apps.googleusercontent.com"
+//            }
+//          ]
+//        });
+
+
+    </script>
 </body>
 </html>
