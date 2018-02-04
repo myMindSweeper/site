@@ -235,3 +235,8 @@ ol{
 .about .content ol li{
     margin-bottom: .25em;
 }
+.demo img {
+    width: 100%;
+    height: auto;
+    transform: translateX(-2px) translateY(1px) scale(1.01);
+}
