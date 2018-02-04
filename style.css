@@ -155,7 +155,7 @@ ol{
 }
 
 .g-signin2 {
-    transform: scale(2) translateY(25%) translateX(-25%); !important
+    transform: scale(2) translateY(calc(25% - 3px)) translateX(-25%); !important
     padding-left: 100px; !important
 }
 
